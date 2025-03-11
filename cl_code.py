@@ -24,9 +24,17 @@ df['month_cos'] = np.cos(2 * np.pi * df['month'] / 12)  # ค่า cos ขอ�
 df['hour_sin'] = np.sin(2 * np.pi * df['hour'] / 24)    # ค่า sin ของชั่วโมง
 df['hour_cos'] = np.cos(2 * np.pi * df['hour'] / 24)    # ค่า cos ของชั่วโมง
 
+<<<<<<< HEAD
 
 # บันทึกไฟล์ใหม่เป็น Excel
 new_file_name = '________________.xlsx'
+=======
+#เอาปี/เดือนออก
+df = df.drop(columns=['year', 'day'])
+
+# บันทึกไฟล์ใหม่
+new_file_name = 'time_feature.xlsx'
+>>>>>>> 5f4c169e1328ac7b2a82a2c4337f28010574a27f
 df.to_excel(new_file_name, index=False)
 
 print("File saved successfully!")
